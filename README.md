@@ -7,12 +7,11 @@ Output: potential threats with suggested mitigations in JSON format (description
 ## Project Structure
 
 ```
-fastapi-chatbot
-├── app
-│   ├── main.py                 # Entry point of the application and logic for interacting with the OpenAI API
-├── .env                        # Environment variables (OpenAI API key)
-├── requirements.txt            # Project dependencies
-└── README.md                   # Documentation for the project
+challenge
+├── main.py                 # Entry point of the application and logic for interacting with the OpenAI API
+├── .env                    # Environment variables (OpenAI API key)
+├── requirements.txt        # Project dependencies
+└── README.md               # Documentation for the project
 ```
 
 ## Setup Instructions
@@ -20,7 +19,6 @@ fastapi-chatbot
 1. **Clone the repository:**
    ```
    git clone <repository-url>
-   cd apiTemp
    ```
 
 2. **Create a virtual environment:**
@@ -48,9 +46,9 @@ fastapi-chatbot
 
 6. **Run the application:**
    ```
-   uvicorn app.main:app --reload
+   uvicorn main:app --reload
    If you want to change default port (8000) to n:
-   uvicorn app.main:app --port n --reload
+   uvicorn main:app --port n --reload
    ```
 
 ## Usage
