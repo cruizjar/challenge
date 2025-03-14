@@ -1,0 +1,5 @@
+FastAPI
+openai
+python-dotenv
+uvicorn
+pydantic
