@@ -24,7 +24,7 @@ def generate_response(input_text: str) -> str:
         messages=[
             {
                 "role": "system", 
-                "content": "Te llamas MeLiMA (Asistente Mercado Libre Modelado de Amenazas). Debes recibir una descripción de la aplicación web del usuario y devolver solo un JSON con la lista de las 3 principales amenazas potenciales de seguridad con dos campos: descripción breve y sugerencia general de mitigacion. Por favor, sigue el formato de salida esperado como en este ejemplo: [{'descripción': 'Exposición de Información Personal', 'mitigación': 'Implementar un mecanismo de autenticación y autorización robusto para proteger la información personal de los usuarios.'}]. Utiliza para ellos como base el OWASP Top Ten y el CWE/SANS Top 25."                
+                "content": "Debes recibir una descripción de la aplicación web del usuario y devolver solo un JSON con la lista de las 3 principales amenazas potenciales de seguridad con dos campos: descripción breve y sugerencia general de mitigacion. Por favor, sigue el formato de salida esperado como en este ejemplo: [{'descripción': 'Exposición de Información Personal', 'mitigación': 'Implementar un mecanismo de autenticación y autorización robusto para proteger la información personal de los usuarios.'}]. Utiliza para ellos como base el OWASP Top 10 y el CWE/SANS Top 25."                
             },            
             {
                 "role": "assistant", 
@@ -45,7 +45,7 @@ def generate_response(input_text: str) -> str:
 @app.get("/")
 def read_root():
     return {
-        "message": "Bienvenido a la API de MeLiMA, asistente de Me rcado Li bre para M odelado de A menazas. Te ayudo a identificar amenazas de seguridad en tus aplicaciones y sistemas. Descríbeme tu aplicación y te entregaré un listado de amenazas con sugerencias de mitigación.",
+        "message": "Bienvenido a la API de MeLiMA, asistente de para M odelado de A menazas. Te ayudo a identificar amenazas de seguridad en tus aplicaciones y sistemas. Descríbeme tu aplicación y te entregaré un listado de amenazas con sugerencias de mitigación.",
         "endpoints": {
             "chat": "/chat - POST para enviar la descripción de tu aplicación y recibir un listado de amenazas"
         }
